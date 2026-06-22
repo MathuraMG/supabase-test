@@ -44,4 +44,6 @@ app.get('/getCups', async (req, res) => {
     res.json({ data });
 });
 
-export default app;  // ← export instead of app.listen()
+app.listen(PORT, () => {
+    console.log(`listening at ${PORT}`);
+});
